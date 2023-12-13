@@ -29,6 +29,6 @@ footer{
 }
 
 .icon-button:hover svg path {
-    color: var(--primary-color);
+    color: var(--accent-color);
     border-radius: 6.5px;
 }

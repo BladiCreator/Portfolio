@@ -2,11 +2,6 @@
     background-color: antiquewhite;
 } */
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .skill-card {
     display: flex;
     flex-direction: column;
@@ -14,15 +9,13 @@
     align-items: center;
 
     width: 78px;
-    background-color: var(--bg-color-card);
-    border-radius: var(--border-radius);
     padding: .4em;
-    margin-right: .4rem;
-    margin-bottom: .4rem;
+    margin: .4rem;
+    max-height: 120px;
 }
 
 .skill-card:hover {
-    transition-duration: 200ms; 
+    transition-duration: var(--transition-time); 
     transition-property: box-shadow;
     box-shadow: 0px 2px 10px 1px hsla(0, 0%, 50%, 0.4);
 }

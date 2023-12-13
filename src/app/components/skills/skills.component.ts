@@ -13,8 +13,8 @@ export class SkillsComponent {
   
   skills: Skill[] = [
     {name: "Angular",logoLink: "assets/icons/angular_icon.svg"},
-    {name: "HTML",logoLink: "assets/icons/html_icon.svg"},
-    {name: "CSS",logoLink: "assets/icons/css_icon.svg"},
+    {name: "HTML5",logoLink: "assets/icons/html_icon.svg"},
+    {name: "CSS3",logoLink: "assets/icons/css_icon.svg"},
     {name: "JavaScript",logoLink: "assets/icons/javascript_logo_icon.svg"},
     {name: "Typescript",logoLink: "assets/icons/typescript_logo_icon.svg"},
     {name: "Java",logoLink: "assets/icons/java_logo_icon.svg"},

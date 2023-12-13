@@ -2,31 +2,38 @@ h1 {
     margin: 0;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
 
     position: sticky;
     top: 0;
 
     background-color: var(--bg-color);
-    padding-block: 1rem;
+    padding-block: .5rem;
 }
 
 .link-container {
-    display: inline;
+    display: flex;
+    flex-direction: row;
 }
 
 .link-container a {
-    padding: .75em;
-    text-decoration: none;
+    padding: .64em;
     font-weight: bold;
     border-radius: var(--border-radius);
+    /* box-sizing: border-box; */
 }
 
 .link-container a:hover {
-    transition: 200ms;
+    transition: var(--transition-time);
     transition-property: box-shadow, color;
     color: var(--primary-color);
     box-shadow: 0 3px 0 -1px var(--primary-color);

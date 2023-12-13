@@ -1,0 +1,15 @@
+h1,h2,h3,h4,h5,h6 {
+    margin-block: .5em;
+}
+
+.experience-list-tile div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-list-tile p {
+    text-wrap: pretty;
+    margin-block: .4em;
+}

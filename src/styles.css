@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot');
+    src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.woff2') format('woff2'),
+        url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.woff') format('woff'),
+        url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.svg#LeagueSpartan-Medium') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --text-color: #000205;
+    --bg-color: #FFFFFF;
+    --bg-color-card: hsla(0, 0%, 50%, 0.15);
+    --bg-color-link: hsla(0, 0%, 50%, 0.2);
+    --primary-color: #F42D19;
+    --secondary-color: #35D83A;
+    --accent-color: #CA2149;
+
+    --border-radius: 5px 20px 5px 20px;
+}
+
+* {
+    color: var(--text-color);
+    font-family: 'League Spartan', sans-serif;
+    line-height: 1.12;
+    letter-spacing: .03em;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    max-width: 868px;
+}
+
+main {
+    margin: 0 16px;
+}

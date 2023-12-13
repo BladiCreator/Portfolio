@@ -1,0 +1,7 @@
+.chip{
+    background-color: hsla(0, 0%, 85%, 0.5);
+    border-radius: var(--border-radius);
+    margin-right: .3em;
+    padding-block: .45em;
+    padding-inline: .6em;
+}

@@ -1,0 +1,24 @@
+<section>
+    <legend>
+        <h2>Proyectos</h2>
+    </legend>
+    @for (fulfilledProject of fulfilledProjects; track $index) {
+    <article class="">
+        <header>
+            <h4>
+                {{fulfilledProject.name}}
+            </h4>
+        </header>
+        <p>
+            {{fulfilledProject.description}}
+        </p>
+        <footer>
+            @for (skill of fulfilledProject.skills; track $index) {
+            <small class="chip">
+                {{skill}}
+            </small>
+            }
+        </footer>
+    </article>
+    }
+</section>

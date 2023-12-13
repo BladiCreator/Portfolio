@@ -1,0 +1,34 @@
+h1, h2, h3, h4, h5, h6{
+    margin-block: 1em;
+}
+
+footer{
+    height: 90px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-button {
+    padding: .5em;
+}
+
+.icon-button + .icon-button{
+    margin-left: .6em;
+}
+
+.icon-button svg {
+    width: 2em;
+    height: 2em;
+    border-radius: 20%;
+}
+
+.icon-button svg path {
+    color: var(--text-color);
+}
+
+.icon-button:hover svg path {
+    color: var(--primary-color);
+    border-radius: 6.5px;
+}

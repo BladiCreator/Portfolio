@@ -1,0 +1,20 @@
+<section class="skill-article" aria-label="Habilidades personales">
+    <legend>
+        <h2>
+            Habilidades
+        </h2>
+    </legend>
+
+    <div class="skills-container">
+        @for (skill of skills; track $index) {
+        <article class="skill-card">
+            @if(skill.logoLink.length > 0) {
+            <img src="{{ skill.logoLink }}" alt="{{ skill.name }}" />
+            }
+            <h4>
+                {{ skill.name }}
+            </h4>
+        </article>
+        }
+    </div>
+</section>

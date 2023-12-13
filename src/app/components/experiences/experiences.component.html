@@ -1,0 +1,27 @@
+<aside>
+    <header>
+        <h2>Experiencia Laboral</h2>
+    </header>
+
+    <ul>
+        @for (experience of experiences; track $index) {
+        <li class="experience-list-tile">
+            <div>
+                <h4>{{ experience.name }}</h4>
+                <h4>{{ experience.date }}</h4>
+            </div>
+            <div>
+                <h5>
+                    {{experience.companyName}}
+                </h5>
+                <h5>
+                    {{experience.localization}}
+                </h5>
+            </div>
+            <p>
+                {{experience.description}}
+            </p>
+        </li>
+        }
+    </ul>
+</aside>

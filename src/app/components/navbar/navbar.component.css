@@ -29,7 +29,7 @@ h1 {
     transition: 200ms;
     transition-property: box-shadow, color;
     color: var(--primary-color);
-    box-shadow: 0 3px 0 0 var(--primary-color);
+    box-shadow: 0 3px 0 -1px var(--primary-color);
 }
 
 /* .link-container .active {

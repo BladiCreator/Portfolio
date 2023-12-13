@@ -12,17 +12,18 @@ import { Skill } from '../../interfaces/skill.interface.interface';
 export class SkillsComponent {
   
   skills: Skill[] = [
-    {name: "Angular",logoLink: "https://th.bing.com/th/id/OIP.UW4z__OL4YcPyGrIN9KqBQHaHa?rs=1&pid=ImgDetMain"},
-    {name: "HTML",logoLink: ""},
-    {name: "CSS",logoLink: ""},
-    {name: "JavaScript",logoLink: ""},
-    {name: "Typescript",logoLink: ""},
-    {name: "Java",logoLink: ""},
-    {name: "C#",logoLink: ""},
-    {name: "Python",logoLink: ""},
-    {name: "Git",logoLink: ""},
-    {name: "Github",logoLink: ""},
-    {name: "XML",logoLink: ""},
+    {name: "Angular",logoLink: "assets/icons/angular_icon.svg"},
+    {name: "HTML",logoLink: "assets/icons/html_icon.svg"},
+    {name: "CSS",logoLink: "assets/icons/css_icon.svg"},
+    {name: "JavaScript",logoLink: "assets/icons/javascript_logo_icon.svg"},
+    {name: "Typescript",logoLink: "assets/icons/typescript_logo_icon.svg"},
+    {name: "Java",logoLink: "assets/icons/java_logo_icon.svg"},
+    {name: "C#",logoLink: "assets/icons/csharp_logo.svg"},
+    {name: "Python",logoLink: "assets/icons/python_icon.svg"},
+    {name: "Git",logoLink: "assets/icons/git_plain_logo_icon.svg"},
+    {name: "Github",logoLink: "assets/icons/github_logo_icon.svg"},
+    {name: "XML",logoLink: "assets/icons/xml_icon.svg"},
+    {name: "MySQL",logoLink: "assets/icons/mysql_logo_icon.svg"},
   ];
 
 }

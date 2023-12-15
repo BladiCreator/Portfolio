@@ -1,44 +1,102 @@
-h1 {
-    margin: 0;
-}
-
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    >h1 {
+        margin: 0;
+    }
+}
+
+svg path{
+    color: var(--text-color);
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
 
     position: sticky;
     top: 0;
 
-    background-color: var(--bg-color);
-    padding-block: .5rem;
+    padding: var(--navbar-padding);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
 }
 
 .link-container {
     display: flex;
     flex-direction: row;
+
+    a {
+        padding: .64em;
+        font-weight: bold;
+        border-radius: var(--border-radius);
+        /* box-sizing: border-box; */
+        
+    }
+    a:hover {
+        transition: var(--transition-time);
+        transition-property: box-shadow, color;
+        color: var(--primary-color);
+        box-shadow: 0 3px 0 -1px var(--primary-color);
+    }
 }
 
-.link-container a {
-    padding: .64em;
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    /* box-sizing: border-box; */
+.sidebar-btn {
+    display: none;
+    height: 38px;
+    width: 36px;
 }
 
-.link-container a:hover {
-    transition: var(--transition-time);
-    transition-property: box-shadow, color;
-    color: var(--primary-color);
-    box-shadow: 0 3px 0 -1px var(--primary-color);
+.sidebar {
+    height: 100%;
+    width: 196px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    padding: var(--navbar-padding);
+    overflow: auto;
+    box-shadow: 5px 0px 20px 2px hsla(0, 0%, 50%, 0.6);
+    box-sizing: border-box;
+
+    .sidebar-btn {
+        display: block;
+    }
+
+    .sidebar-link-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-/* .link-container .active {
-    background-color: var(--bg-color-link);
-} */
+.active-sidebar {
+    display: block;
+    animation: sidebar-anim-open .2s ease-in-out 0s 1 normal forwards;
+}
+
+.inactive-sidebar {
+    animation: sidebar-anim-close .2s ease-in-out 0s 1 normal forwards;
+}
+
+@media (width < 856px) {
+    .navbar {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .sidebar-btn {
+        display: block;
+    }
+
+    .link-container {
+        display: none;
+    }
+
+    .sidebar-link-container {
+        display: flex;
+    }
+}

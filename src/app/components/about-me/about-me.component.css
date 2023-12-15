@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap: 16px;
 }
 
 .about-me-container img {

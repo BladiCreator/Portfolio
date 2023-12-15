@@ -24,6 +24,13 @@
     --border-radius: 5px 20px 5px 20px;
     --border-radius-inverted: 20px 5px 20px 5px;
     --transition-time: 200ms;
+    --navbar-padding: .5rem;
+}
+
+:focus-visible {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: var(--accent-color);
 }
 
 * {
@@ -33,50 +40,68 @@
     letter-spacing: .03em;
 }
 
-html {
-    display: flex;
-    justify-content: center;
-}
-
 body {
     background-color: var(--bg-color);
     margin: 0;
-    max-width: 868px;
+
+    main {
+        margin: 0 auto;
+        max-width: 868px;
+        padding-inline: 16px;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
 
-main {
-    margin: 0 16px;
-}
-
-.cards-container{
+.cards-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.background-color-card{
+.background-color-card {
     background-color: var(--bg-color-card);
     border-radius: var(--border-radius);
 }
 
-.filled-btn{
+.filled-btn {
     border: none;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: var(--transition-time);
 }
 
-.filled-btn:hover, .filled-btn:focus-visible{
+.filled-btn:hover,
+.filled-btn:focus-visible {
     border-radius: var(--border-radius-inverted);
 }
 
-:focus-visible{
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: var(--accent-color);
+@keyframes sidebar-anim-open {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-a {
-    text-decoration: none;
+/* !No se está usando por el momento, hay que poder usarlo */
+@keyframes sidebar-anim-close {
+    0% {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-200px);
+        display: none;
+    }
 }

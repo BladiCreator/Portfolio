@@ -9,5 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  sidebar: boolean = false;
 
+  toggleSidebar(){
+    this.sidebar = !this.sidebar;
+    console.log(this.sidebar);
+  }
 }

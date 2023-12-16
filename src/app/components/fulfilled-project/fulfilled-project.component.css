@@ -6,11 +6,11 @@ article {
 a {
     display: flex;
     align-items: center;
-    color: var(--accent-color);
+    color: oklch(var(--accent-color))
 }
 
 a svg path {
-    color: var(--accent-color);
+    color: oklch(var(--accent-color))
 }
 
 svg {

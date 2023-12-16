@@ -17,7 +17,7 @@ header {
     top: 0;
 
     padding: var(--navbar-padding);
-    background-color: transparent;
+    background-color: oklch(var(--primary-color) / 5%);
     backdrop-filter: blur(20px);
 
     height: var(--navbar-height);
@@ -38,8 +38,8 @@ header {
     a:hover {
         transition: var(--transition-time);
         transition-property: box-shadow, color;
-        color: var(--primary-color);
-        box-shadow: 0 3px 0 -1px var(--primary-color);
+        color: oklch(var(--primary-color));
+        box-shadow: 0 3px 0 -1px oklch(var(--primary-color));
     }
 }
 
@@ -47,6 +47,7 @@ header {
     display: none;
     height: 38px;
     width: 36px;
+    padding: 0;
 }
 
 .sidebar {

@@ -15,13 +15,13 @@
 :root {
     --text-color: #fff;
     --bg-color: hsl(120, 100%, 1%);
-    --primary-color: oklch(84.12% 0.345 145.06);
-    --secondary-color: oklch(92.94% 0.2252 103.77);
-    --accent-color: oklch(94.11% 0.1904 115.77);
+    --primary-color: 84.12% 0.345 145.06;
+    --secondary-color: 92.94% 0.2252 103.77;
+    --accent-color: 94.11% 0.1904 115.77;
 
     --bg-color-card: hsla(0, 0%, 50%, 0.15);
     --bg-color-link: hsla(0, 0%, 50%, 0.2);
-    --shadow-color: oklch(84.12% 0.345 145.06 / 50%);
+    --shadow-color: oklch(var(--primary-color) / 50%);
 
     --border-radius: 5px 20px 5px 20px;
     --border-radius-inverted: 20px 5px 20px 5px;
@@ -33,7 +33,7 @@
 :focus-visible {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: var(--accent-color);
+    outline-color: oklch(var(--accent-color))
 }
 
 * {
@@ -69,10 +69,27 @@ body {
 h1,
 h2,
 h3 {
-    background: linear-gradient(to bottom right in oklab, var(--primary-color), var(--secondary-color)) fixed;
+    background: linear-gradient(to bottom right in oklab, oklch(var(--primary-color)), oklch(var(--secondary-color))) fixed;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+input,
+button,
+textarea {
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+button {
+    width: fit-content;
+    font-size: large;
+    font-weight: bold;
+    padding-inline: 1.5em;
+    box-sizing: border-box;
+}
+
+/** Classes*/
 
 .cards-container {
     display: flex;
@@ -88,7 +105,7 @@ h3 {
 
 .filled-btn {
     border: none;
-    background-color: var(--secondary-color);
+    background-color: oklch(var(--secondary-color));
     border-radius: var(--border-radius);
     transition: var(--transition-time);
     color: black;
@@ -102,6 +119,8 @@ h3 {
 .filled-btn:focus-visible {
     border-radius: var(--border-radius-inverted);
 }
+
+/** Animations*/
 
 @keyframes sidebar-anim-open {
     0% {

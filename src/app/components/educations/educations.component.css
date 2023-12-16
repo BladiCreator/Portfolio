@@ -15,7 +15,7 @@ h1 {
     text-align: center;
 }
 
-h1:first-child {
+h1:last-child {
     background: none;
     background-clip: none;
     -webkit-text-fill-color: inherit;

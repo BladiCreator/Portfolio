@@ -13,6 +13,5 @@ export class NavbarComponent {
 
   toggleSidebar(){
     this.sidebar = !this.sidebar;
-    console.log(this.sidebar);
   }
 }

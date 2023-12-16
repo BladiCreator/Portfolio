@@ -2,38 +2,36 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
 }
 
-input + input, button, textarea{
-    margin-top: 10px;
-}
-
-input, textarea{
+form div {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
     background-color: inherit;
     transition: var(--transition-time);
     border: none;
-    outline-color: var(--primary-color);
+    outline-color: oklch(var(--primary-color));
     outline-style: solid;
     outline-width: 2px;
-    /* border-style: solid;
-    border-color: var(--primary-color); */
 }
 
-input:focus-visible, textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
     border-radius: var(--border-radius-inverted);
-    outline-color: var(--accent-color);
+    outline-color: oklch(var(--accent-color))
 }
 
-input, button, textarea{
-    border-radius: var(--border-radius);
-    padding-block: 1em;
-    padding-inline: 1em;
-}
-
-button{
-    font-size: large;
-    font-weight: bold;
-    padding-inline: 1.5em;
-}
 

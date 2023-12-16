@@ -19,6 +19,9 @@ header {
     padding: var(--navbar-padding);
     background-color: transparent;
     backdrop-filter: blur(20px);
+
+    height: var(--navbar-height);
+    box-sizing: border-box;
 }
 
 .link-container {

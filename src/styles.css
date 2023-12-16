@@ -13,8 +13,8 @@
 }
 
 :root {
-    --text-color: #FFF;
-    --bg-color: #000205;
+    --text-color: #fff;
+    --bg-color: hsl(120, 100%, 1%);
     --primary-color: oklch(84.12% 0.345 145.06);
     --secondary-color: oklch(92.94% 0.2252 103.77);
     --accent-color: oklch(94.11% 0.1904 115.77);
@@ -27,6 +27,7 @@
     --border-radius-inverted: 20px 5px 20px 5px;
     --transition-time: 200ms;
     --navbar-padding: .5rem;
+    --navbar-height: 57px;
 }
 
 :focus-visible {
@@ -42,6 +43,10 @@
     letter-spacing: .03em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     margin: 0;
@@ -50,6 +55,10 @@ body {
         margin: 0 auto;
         max-width: 868px;
         padding-inline: 16px;
+
+        [id] {
+            scroll-margin-top: var(--navbar-height);
+        }
     }
 
     a {
@@ -59,7 +68,7 @@ body {
 
 h1,
 h2,
-h3{
+h3 {
     background: linear-gradient(to bottom right in oklab, var(--primary-color), var(--secondary-color)) fixed;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -83,6 +92,7 @@ h3{
     border-radius: var(--border-radius);
     transition: var(--transition-time);
     color: black;
+
     svg path {
         color: black;
     }

@@ -22,10 +22,6 @@
     }
 }
 
-#GitHub{
-    filter: invert(1);
-}
-
 .skill-card:hover {
     transition-duration: var(--transition-time); 
     transition-property: box-shadow;

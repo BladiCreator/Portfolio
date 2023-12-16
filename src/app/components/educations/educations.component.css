@@ -15,7 +15,12 @@ h1 {
     text-align: center;
 }
 
+h1:first-child {
+    background: none;
+    background-clip: none;
+    -webkit-text-fill-color: inherit;
+}
+
 h1+h1 {
     margin-bottom: 0;
-    color: var(--primary-color);
 }

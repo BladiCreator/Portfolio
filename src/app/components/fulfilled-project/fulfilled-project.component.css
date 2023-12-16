@@ -9,7 +9,7 @@ a {
     color: var(--accent-color);
 }
 
-a svg path{
+a svg path {
     color: var(--accent-color);
 }
 
@@ -21,16 +21,20 @@ svg {
 header {
     display: flex;
     justify-content: space-between;
+
+    h3 {
+        margin: 0;
+    }
 }
 
-header h3 {
-    margin: 0;
-    color: var(--primary-color);
-}
 
 /* .chips-container{
     display: flex;
 } */
+
+.cards-container {
+    gap: 5px;
+}
 
 .chip {
     display: block;
@@ -40,8 +44,4 @@ header h3 {
     border-radius: var(--border-radius);
     padding-block: .45em;
     padding-inline: .9em;
-}
-
-.chip+.chip {
-    margin-left: .3em;
 }

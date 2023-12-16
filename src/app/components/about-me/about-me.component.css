@@ -4,11 +4,19 @@
     justify-content: space-around;
     align-items: center;
     gap: 16px;
-}
 
-.about-me-container img {
-    width: 94px;
-    border-radius: var(--border-radius);
+    img {
+        width: 94px;
+        border-radius: var(--border-radius);
+    }
+
+    header {
+        h1:first-child {
+            background: none;
+            background-clip: none;
+            -webkit-text-fill-color: inherit;
+        }
+    }
 }
 
 .additional-information-container {
@@ -16,8 +24,4 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-}
-
-header h1 + h1 {
-    color: var(--primary-color);
 }

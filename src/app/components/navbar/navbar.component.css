@@ -8,10 +8,6 @@ header {
     }
 }
 
-svg path{
-    color: var(--text-color);
-}
-
 .navbar {
     display: flex;
     justify-content: space-around;

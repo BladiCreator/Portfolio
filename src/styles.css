@@ -1,23 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
+    font-display: swap;
     font-family: 'League Spartan';
     src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot');
     src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot?#iefix') format('embedded-opentype'),
         url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.woff2') format('woff2'),
         url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.woff') format('woff'),
         url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.svg#LeagueSpartan-Medium') format('svg');
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
+/*oklch(84.12% 0.345 145.06)*/
 :root {
-    --text-color: #fff;
-    --bg-color: hsl(120, 100%, 1%);
-    --primary-color: 84.12% 0.345 145.06;
-    --secondary-color: 92.94% 0.2252 103.77;
-    --accent-color: 94.11% 0.1904 115.77;
+    color-scheme: light dark;
+
+    --primary-color: 72.06% 0.2263 145.05;
+    --secondary-color: 71.33% 0.1469 232.95;
+    --accent-color: 59.46% 0.2288 292.24;
+
+    --error-color: 61.24% 0.2365 28.46;
 
     --bg-color-card: hsla(0, 0%, 50%, 0.15);
     --bg-color-link: hsla(0, 0%, 50%, 0.2);
@@ -28,6 +31,15 @@
     --transition-time: 200ms;
     --navbar-padding: .5rem;
     --navbar-height: 57px;
+    --backdrop-filter-blur: blur(20px);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: 84.12% 0.345 145.06;
+        --secondary-color: 92.94% 0.2252 103.77;
+        --accent-color: 94.11% 0.1904 115.77;
+    }
 }
 
 :focus-visible {
@@ -37,7 +49,6 @@
 }
 
 * {
-    color: var(--text-color);
     font-family: 'League Spartan', sans-serif;
     line-height: 1.12;
     letter-spacing: .03em;
@@ -60,9 +71,14 @@ body {
             scroll-margin-top: var(--navbar-height);
         }
     }
+}
 
-    a {
-        text-decoration: none;
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+
+    &:visited {
+        color: oklch(var(--accent-color))
     }
 }
 
@@ -120,7 +136,11 @@ button {
     border-radius: var(--border-radius-inverted);
 }
 
-/** Animations*/
+/** Media */
+
+
+
+/** Animations */
 
 @keyframes sidebar-anim-open {
     0% {

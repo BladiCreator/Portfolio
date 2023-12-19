@@ -26,12 +26,22 @@ textarea {
     outline-color: oklch(var(--primary-color));
     outline-style: solid;
     outline-width: 2px;
+
+    &:focus-visible {
+        border-radius: var(--border-radius-inverted);
+        outline-color: oklch(var(--accent-color))
+    }
 }
 
-input:focus-visible,
-textarea:focus-visible {
-    border-radius: var(--border-radius-inverted);
-    outline-color: oklch(var(--accent-color))
+.invalid {
+    outline-color: oklch(var(--error-color));
 }
 
-
+.error {
+    margin-top: 10px;
+    color: oklch(var(--error-color));
+    background-color: oklch(var(--error-color) / 20%);
+    border-radius: var(--border-radius);
+    border: solid oklch(var(--error-color)) 2px;
+    padding: .5em;
+}

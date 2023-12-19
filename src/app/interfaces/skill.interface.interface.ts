@@ -1,4 +1,4 @@
 export interface Skill {
     name: string;
-    logoLink: string;
+    logoLink?: string;
 }

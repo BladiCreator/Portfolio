@@ -26,6 +26,7 @@ export class SkillsComponent {
     {name: "MySQL",logoLink: "assets/icons/skills/mysql_icon.svg"},
     {name: "Flutter",logoLink: "assets/icons/skills/flutter_icon.svg"},
     {name: "Dart",logoLink: "assets/icons/skills/dart_icon.svg"},
+    {name: "Android Studio",logoLink: "assets/icons/skills/android_studio_icon.svg"},
     {name: "Bootstrap",logoLink: "assets/icons/skills/bootstrap_icon.svg"},
   ];
 

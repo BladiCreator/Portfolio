@@ -5,13 +5,35 @@
         </h2>
     </legend>
 
-    <form action="">
-        <input type="text" name="" id="" placeholder="Nombre">
-        <input type="email" name="" id="" placeholder="Correo">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+    <form [formGroup]="contactMeForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Nombre:
+                <input type="text" name="name" id="name-form" placeholder="Nombre" formControlName="name"
+                    [class.invalid]="validating('name')">
+                @if (hasRequiredError('name')) {
+                <span class="error">Este campo es requerido</span>
+                }
+            </label>
 
-        <button class="filled-btn">
-            Enviar mensaje
-        </button>
+            <label for="email">Email:
+                <input type="email" name="email" id="email-form" placeholder="Correo" formControlName="email"
+                    [class.invalid]="validating('email')">
+                @if (hasRequiredError('email')) {
+                <span class="error">Este campo es requerido</span>
+                }
+            </label>
+
+            <label for="message">Mensaje:
+                <textarea name="message" id="message-form" cols="30" rows="10" placeholder="Mensaje"
+                    formControlName="message" [class.invalid]="validating('message')"></textarea>
+                @if (hasRequiredError('message')) {
+                <span class="error">Este campo es requerido</span>
+                }
+            </label>
+
+            <button class="filled-btn">
+                Enviar mensaje
+            </button>
+        </div>
     </form>
 </section>

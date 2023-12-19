@@ -8,7 +8,7 @@
     <div class="cards-container">
         @for (skill of skills; track $index) {
         <article class="skill-card background-color-card">
-            @if(skill.logoLink.length > 0) {
+            @if(skill.logoLink != undefined && skill.logoLink.length > 0) {
             <img src="{{ skill.logoLink }}" alt="{{ skill.name }}"/>
             }
             <h4 class="skill-title">

@@ -105,6 +105,14 @@ button {
     box-sizing: border-box;
 }
 
+dialog {
+    position: fixed;
+    inset: 0;
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-color: oklch(var(--primary-color));
+}
+
 /** Classes*/
 
 .cards-container {
@@ -129,11 +137,12 @@ button {
     svg path {
         color: black;
     }
-}
 
-.filled-btn:hover,
-.filled-btn:focus-visible {
-    border-radius: var(--border-radius-inverted);
+    &:hover,
+    :focus-visible {
+        border-radius: var(--border-radius-inverted);
+        cursor: pointer;
+    }
 }
 
 /** Media */

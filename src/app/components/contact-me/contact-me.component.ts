@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { EmailForm } from '../../interfaces/email-form.interface';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { EmailService } from '../../services/email.service';
 
 @Component({
@@ -22,14 +21,20 @@ export class ContactMeComponent {
 
   constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
+  @ViewChild('notSendedMessageDialog', { static: true }) notSendedMessageDialog?: ElementRef<HTMLDialogElement>;
+  @ViewChild('sendedMessageDialog', { static: true }) sendedMessageDialog?: ElementRef<HTMLDialogElement>;
+
+  //TODO:Cuando se trate de enviar un correo se verifica si es humano usando Captcha antes de enviar el correo
   onSubmit() {
     if (this.contactMeForm.valid && !this.isSubmitted) {
       let sended: boolean = this.emailService.send(this.contactMeForm.value);
       if (!sended) {
-        console.log(sended);
-
+        this.notSendedMessageDialog?.nativeElement.showModal();
+      } else {
+        this.sendedMessageDialog?.nativeElement.showModal();
       }
       this.isSubmitted = sended;
+      this.contactMeForm.reset();
     }
   }
 

@@ -20,6 +20,8 @@
                     [class.invalid]="validating('email')">
                 @if (hasRequiredError('email')) {
                 <span class="error">Este campo es requerido</span>
+                }@else if (this.contactMeForm.get('email')?.hasError('email')) {
+                <span class="error">Este campo es un correo, necesita el símbolo {{"@"}}</span>
                 }
             </label>
 
@@ -37,3 +39,18 @@
         </div>
     </form>
 </section>
+
+<dialog #notSendedMessageDialog>
+    <p>No se ha podido enviar el mensaje, puede ser por que ya has enviado un mensaje o porque ha habido un error al
+        tratar de enviarlo. Gracias</p>
+    <form method="dialog">
+        <button class="filled-btn">Aceptar</button>
+    </form>
+</dialog>
+
+<dialog #sendedMessageDialog>
+    <p>Mensaje enviado. Gracias</p>
+    <form method="dialog">
+        <button class="filled-btn">Aceptar</button>
+    </form>
+</dialog>

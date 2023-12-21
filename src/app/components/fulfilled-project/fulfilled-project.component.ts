@@ -11,6 +11,11 @@ import { FulfilledProject } from '../../interfaces/fulfilled-project.interface';
 })
 export class FulfilledProjectComponent {
   fulfilledProjects: FulfilledProject[] = [
-    { name: "Adaclass", description: "Aplicación que te permite pasar lista de los alumnos que hayan participado o no en diferentes clases", skills: [{ name: "Flutter" }, { name: "Dart" }], url: "" },
+    {
+      name: "ss",
+      description: "ss",
+      skills: [{ name: "s" }, { name: "s" }],
+      url: ""
+    },
   ];
 }

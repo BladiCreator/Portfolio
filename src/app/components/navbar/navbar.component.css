@@ -82,7 +82,7 @@ header {
     animation: sidebar-anim-close .2s ease-in-out 0s 1 normal forwards;
 }
 
-@media (width < 856px) {
+@media (width < 934px) {
     .navbar {
         justify-content: flex-start;
         gap: 10px;

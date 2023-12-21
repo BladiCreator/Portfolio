@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-    font-display: swap;
+    font-display: optional;
     font-family: 'League Spartan';
     src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot');
     src: url('assets/fonts/LeagueSpartan/LeagueSpartan-Medium.eot?#iefix') format('embedded-opentype'),
@@ -18,7 +18,7 @@
 
     --primary-color: 72.06% 0.2263 145.05;
     --secondary-color: 71.33% 0.1469 232.95;
-    --accent-color: 59.46% 0.2288 292.24;
+    --accent-color: 66.18% 0.1267 226.46;
 
     --error-color: 61.24% 0.2365 28.46;
 
@@ -64,7 +64,7 @@ body {
 
     main {
         margin: 0 auto;
-        max-width: 868px;
+        max-width: 1280px;
         padding-inline: 16px;
 
         [id] {
@@ -78,7 +78,7 @@ a {
     color: var(--accent-color);
 
     &:visited {
-        color: oklch(var(--accent-color))
+        color: inherit;
     }
 }
 
@@ -126,7 +126,7 @@ dialog {
     display: grid;
     grid-template-columns:
         repeat(auto-fill,
-            minmax(300px, 1fr));
+            minmax(320px, 1fr));
     gap: 10px;
 }
 
@@ -159,6 +159,16 @@ dialog {
 
 /** Animations */
 
+@keyframes skill-anim-skew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    100% {
+        transform: skew(4deg, 2deg);
+    }
+}
+
 @keyframes sidebar-anim-open {
     0% {
         opacity: 0;
@@ -171,7 +181,6 @@ dialog {
     }
 }
 
-/* !No se está usando por el momento, hay que poder usarlo */
 @keyframes sidebar-anim-close {
     0% {
         display: block;

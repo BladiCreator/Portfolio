@@ -12,9 +12,9 @@ import { FulfilledProject } from '../../interfaces/fulfilled-project.interface';
 export class FulfilledProjectComponent {
   fulfilledProjects: FulfilledProject[] = [
     {
-      name: "ss",
-      description: "ss",
-      skills: [{ name: "s" }, { name: "s" }],
+      name: "PlaceHolder",
+      description: "Testing placeholder",
+      skills: [{ name: "Html" }, { name: "CSS" }],
       url: ""
     },
   ];

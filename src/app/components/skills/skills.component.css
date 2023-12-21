@@ -12,18 +12,15 @@
     padding: .4em;
     max-height: 120px;
 
-    img {
-        width: 64px;
+    &:hover {
+        transition-duration: var(--transition-time);
+        transition-property: box-shadow;
+        box-shadow: 0px 2px 10px 1px var(--shadow-color);
+        animation: skill-anim-skew .2s ease-in-out 0s 1 normal forwards;
     }
 
     h4 {
         text-align: center;
         margin-block: .45em;
-    }
-
-    &:hover {
-        transition-duration: var(--transition-time);
-        transition-property: box-shadow;
-        box-shadow: 0px 2px 10px 1px var(--shadow-color);
     }
 }

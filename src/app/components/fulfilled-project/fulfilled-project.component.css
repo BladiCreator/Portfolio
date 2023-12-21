@@ -38,16 +38,16 @@
             }
         }
     }
-}
 
-.chip {
-    display: block;
-    width: fit-content;
-    height: fit-content;
-    background-color: hsla(0, 0%, 85%, 0.5);
-    border-radius: var(--border-radius);
-    padding-block: .45em;
-    padding-inline: .9em;
-    outline-style: solid;
-    outline-width: thin;
+    .chip {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        background-color: hsla(0, 0%, 85%, 0.5);
+        border-radius: var(--border-radius);
+        padding-block: .45em;
+        padding-inline: .9em;
+        outline-style: solid;
+        outline-width: thin;
+    }
 }

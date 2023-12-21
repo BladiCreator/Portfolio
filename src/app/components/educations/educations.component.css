@@ -4,10 +4,7 @@
     justify-content: center;
     align-items: center;
 
-    max-width: 320px;
     padding: 1em;
-    min-height: 120px;
-    margin: .4rem;
 }
 
 h1 {

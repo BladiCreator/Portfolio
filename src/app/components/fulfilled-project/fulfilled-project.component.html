@@ -3,14 +3,14 @@
         <h2>Proyectos</h2>
     </legend>
 
-    <div class="cards-container">
+    <div class="cards-container-grid">
         @for (fulfilledProject of fulfilledProjects; track $index) {
         <article class="project-card background-color-card">
             <header>
                 <h3>
                     {{fulfilledProject.name}}
                 </h3>
-                <a href="">
+                <a href="{{fulfilledProject.url}}">
                     Ver más
                     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -23,7 +23,7 @@
             <p>
                 {{fulfilledProject.description}}
             </p>
-            <footer class="cards-container">
+            <footer class="cards-container-flex">
                 @for (skill of fulfilledProject.skills; track $index) {
                 <small class="chip">
                     {{skill.name}}

@@ -115,10 +115,18 @@ dialog {
 
 /** Classes*/
 
-.cards-container {
+.cards-container-flex {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cards-container-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill,
+            minmax(300px, 1fr));
     gap: 10px;
 }
 
@@ -139,7 +147,7 @@ dialog {
     }
 
     &:hover,
-    :focus-visible {
+    &:focus-visible {
         border-radius: var(--border-radius-inverted);
         cursor: pointer;
     }

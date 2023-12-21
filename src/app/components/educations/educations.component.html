@@ -5,10 +5,13 @@
         </h2>
     </legend>
 
-    <div class="cards-container">
+
+    <div class="cards-container-grid">
+        @for (education of educations; track $index) {
         <article class="card-education background-color-card">
-            <h1>FP Superior Desarrollo de aplicaciones multiplataforma</h1>
-            <h1>IES Villaverde</h1>
+            <h1>{{education.formation_title}}</h1>
+            <h1>{{education.school_title}}</h1>
         </article>
+        }
     </div>
 </section>

@@ -1,39 +1,43 @@
-article {
+.project-card {
     padding: .8rem;
-    max-width: 386px;
-}
 
-a {
-    display: flex;
-    align-items: center;
-    color: oklch(var(--accent-color))
-}
+    header {
+        display: flex;
+        justify-content: space-between;
 
-a svg path {
-    color: oklch(var(--accent-color))
-}
+        h3 {
+            margin: 0;
+        }
 
-svg {
-    width: 1em;
-    margin-left: .2em;
-}
+        a {
+            display: flex;
+            align-items: center;
+            color: oklch(var(--accent-color));
+            padding: .3em;
+            border-radius: var(--border-radius);
+            transition: var(--transition-time);
 
-header {
-    display: flex;
-    justify-content: space-between;
+            &:hover {
+                outline-color: oklch(var(--accent-color));
+                outline-style: solid;
+                outline-width: 2px;
+                outline-offset: 4px;
+            }
 
-    h3 {
-        margin: 0;
+            &:focus-visible {
+                border-radius: var(--border-radius-inverted);
+            }
+
+            svg {
+                width: 1em;
+                margin-left: .2em;
+
+                path {
+                    color: oklch(var(--accent-color))
+                }
+            }
+        }
     }
-}
-
-
-/* .chips-container{
-    display: flex;
-} */
-
-.cards-container {
-    gap: 5px;
 }
 
 .chip {
@@ -44,4 +48,6 @@ header {
     border-radius: var(--border-radius);
     padding-block: .45em;
     padding-inline: .9em;
+    outline-style: solid;
+    outline-width: thin;
 }

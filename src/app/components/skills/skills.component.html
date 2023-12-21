@@ -5,7 +5,7 @@
         </h2>
     </legend>
 
-    <div class="cards-container">
+    <div class="cards-container-flex">
         @for (skill of skills; track $index) {
         <article class="skill-card background-color-card">
             @if(skill.logoLink != undefined && skill.logoLink.length > 0) {

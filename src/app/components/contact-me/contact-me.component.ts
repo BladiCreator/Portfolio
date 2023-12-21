@@ -11,10 +11,18 @@ import { EmailService } from '../../services/email.service';
   styleUrl: './contact-me.component.css'
 })
 export class ContactMeComponent {
+  private _MAX_LENGTH: number = 920;
+
+  
+  public get MAX_LENGTH() : number {
+    return this._MAX_LENGTH;
+  }
+  
+
   contactMeForm = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required, Validators.maxLength(120)]],
+    message: ['', [Validators.required, Validators.maxLength(this.MAX_LENGTH)]],
   });
 
   private isSubmitted: boolean = false;

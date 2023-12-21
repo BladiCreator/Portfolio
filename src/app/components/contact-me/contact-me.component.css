@@ -12,24 +12,11 @@ form {
         label {
             display: flex;
             flex-direction: column;
+            gap: 12px;
         }
     }
 }
 
-input,
-textarea {
-    background-color: inherit;
-    transition: var(--transition-time);
-    border: none;
-    outline-color: oklch(var(--primary-color));
-    outline-style: solid;
-    outline-width: 2px;
-
-    &:focus-visible {
-        border-radius: var(--border-radius-inverted);
-        outline-color: oklch(var(--accent-color))
-    }
-}
 
 .invalid {
     outline-color: oklch(var(--error-color));

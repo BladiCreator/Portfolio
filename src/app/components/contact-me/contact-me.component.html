@@ -25,11 +25,13 @@
                 }
             </label>
 
-            <label for="message">Mensaje:
+            <label for="message">Mensaje ({{contactMeForm.controls.message.value?.length}}/{{this.MAX_LENGTH}}):
                 <textarea name="message" id="message-form" cols="30" rows="10" placeholder="Mensaje"
                     formControlName="message" [class.invalid]="validating('message')"></textarea>
                 @if (hasRequiredError('message')) {
                 <span class="error">Este campo es requerido</span>
+                }@else if (this.contactMeForm.controls.message.hasError('maxlength')) {
+                <span class="error">Máxima longitud superado</span>
                 }
             </label>
 

@@ -97,6 +97,27 @@ textarea {
     padding: 1rem;
 }
 
+input,
+textarea {
+    background-color: inherit;
+    transition: var(--transition-time);
+    transition-property: color, border-radius, outline;
+    border: none;
+    outline-color: oklch(var(--primary-color));
+    outline-style: solid;
+    outline-width: 2px;
+
+    &:focus-visible {
+        border-radius: var(--border-radius-inverted);
+        outline-color: oklch(var(--accent-color))
+    }
+}
+
+textarea{
+    resize: vertical;
+}
+
+
 button {
     width: fit-content;
     font-size: large;
@@ -140,6 +161,7 @@ dialog {
     background-color: oklch(var(--secondary-color));
     border-radius: var(--border-radius);
     transition: var(--transition-time);
+    transition-property: border-radius;
     color: black;
 
     svg path {
